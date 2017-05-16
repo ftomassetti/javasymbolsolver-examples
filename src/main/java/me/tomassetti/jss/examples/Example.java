@@ -36,9 +36,11 @@ public class Example {
         ClassOrInterfaceDeclaration aThirdClass = aThirdClassCU.getClassByName("AThirdClass").get();
         ReferenceTypeDeclaration aThirdClassJss = JavaParserFacade.get(typeSolver).getTypeDeclaration(aThirdClass);
         ReferenceTypeDeclaration anotherClassJSS = typeSolver.solveType("my.packagez.AnotherClass").asReferenceType();
+        ReferenceTypeDeclaration stringJSS = typeSolver.solveType("java.lang.String").asReferenceType();
 
         printAncestors(aThirdClassJss);
         printAncestors(anotherClassJSS);
+        printAncestors(stringJSS);
 
         // Let's calculate the type of all expressions
         for (Expression expression : aThirdClassCU.getChildNodesByType(Expression.class)) {

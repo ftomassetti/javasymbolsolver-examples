@@ -9,7 +9,7 @@ public class AThirdClass {
     public void invoker() {
         AnotherClass anotherClass = new AnotherClass();
         anotherClass.aMethod();
-        anotherClass.aMethod(returnAnInt() * 2);
+        anotherClass.aMethod(returnAnInt() * 3);
         anotherClass.aMethod("foo");
     }
 
